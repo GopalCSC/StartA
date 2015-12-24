@@ -31,7 +31,7 @@ export class HeroDetailComponent {
         this.hero = hero; 
         console.log(hero);
         this.myForm = fb.group({"name": [this.hero.name, Validators.required],
-                               "age": [this.hero.name],                               
+                               "age": [this.hero.age],                               
                                "ssn": [this.hero.ssn, Validators.compose([Validators.required,ssnValidator])]})
                                                               
         //this.name = this.myForm.controls['name']; 
@@ -47,7 +47,7 @@ export class HeroDetailComponent {
   onSubmit(frm) {
     console.log(frm)
     console.log(frm.value)
-    this._router.navigateByUrl('/')    
+    this._router.navigate(['/' + Routes.heroes.name]);      
   }
 }
 
