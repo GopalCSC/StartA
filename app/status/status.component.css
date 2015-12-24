@@ -1,0 +1,15 @@
+.ng {
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background: url('app/status/angular_solidBlack.svg');
+}
+
+.ng.selected {
+    background: url('app/status/angular_solidRed.svg');
+}
+
+.inactive {
+    background: url('app/status/angular_solidGrey.svg');
+}

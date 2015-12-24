@@ -1,0 +1,5 @@
+<h1>{{title}}</h1>
+<h5>Welcome {{currentUser.getName()}}</h5>
+<a [routerLink]="routes.dashboard.link" class="router-link">Dashboard</a>
+<a [routerLink]="routes.heroes.link" class="router-link">Heroes</a>
+<router-outlet></router-outlet>

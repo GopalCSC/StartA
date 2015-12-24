@@ -1,0 +1,21 @@
+h3 { text-align: center; margin-bottom: 0; }
+
+[class*='col-'] { float: left; padding-right: 20px; padding-bottom: 20px;}
+
+.grid { margin: 0; }
+.col-1-4 { width: 50%; }
+.module {
+	padding: 10px;
+	text-align: center;
+	color: #eee;
+	max-height: 100px;
+	min-width: 120px;
+	background-color: #1171a3;
+	-webkit-user-select: none;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+.module:hover { background-color: #52b9e9; cursor: pointer; }
+
+.grid-pad { padding: 20px 0 20px 20px; }
+.grid-pad > [class*='col-']:last-of-type { padding-right: 20px; }

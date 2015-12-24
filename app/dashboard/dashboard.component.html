@@ -1,0 +1,17 @@
+<h3>Celebrities</h3>
+
+<div class="grid grid-pad">
+	<div *ngFor="#hero of heroes" class="col-1-4">
+		<div class="module hero">
+			<div>{{hero.name}}</div>
+			<status
+					[active]="!hero.retired"
+					(change)="onChange($event, hero)">
+			</status>
+		</div>
+	</div>
+</div>
+
+<h3 *ngIf="ngHeroes.length > 0">
+  {{ngHeroesString}} are on my team!
+</h3>

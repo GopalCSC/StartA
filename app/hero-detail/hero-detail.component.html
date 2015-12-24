@@ -1,0 +1,32 @@
+<div>
+	<!-- <alert dismiss-on-timeout="3000">This alert will dismiss in 3s</alert> -->
+	<h2>Hero ID () </h2>		
+	<form [ngFormModel]="myForm" (submit)="onSubmit(myForm)">
+		<!-- form-group & form-control classes from bootstrap-->
+		<!-- [class.has-error]="!sku.valid && sku.touched" -->
+		<div class="form-group" [class.has-error]="!myForm.valid">
+			<label for="idName">Name:</label>  		
+			<input id="idName" class="form-control" placeholder="name" [ngFormControl]="myForm.controls['name']">
+			<div *ngIf="!myForm.find('name').valid" class="bg-warning">1 way - Name is required</div>
+			<!--<div *ngIf="!name.control.valid" class="bg-warning">2 way - Name is required</div>-->
+			<div *ngIf="myForm.hasError('required', 'name')" class="bg-warning">3 way Name is required</div> 
+						  
+			<br><label for="idAge">Age:</label>	    
+			<input id="idAge" class="form-control" placeholder="age" [ngFormControl]="myForm.controls['age']">
+			<br><label for="idSsn">SSN:</label>            
+			<input id="idSsn" class="form-control" [ngFormControl]="myForm.controls['ssn']">
+			<div *ngIf="myForm.hasError('invalidSSN','ssn')" class="bg-warning">SSN format must be NNN-NN-NNNN</div>
+		</div>
+		<!-- md-default-theme is from angular material design css -->
+		<button class="md-button md-default-theme md-raised md-icon-button" [routerLink]="routes.heroes.link">Cancel</button>
+		<!-- btn-default is from bootstrap -->
+		<button type="submit" class="btn btn-default" [disabled]="!myForm.valid">Save</button>
+		<!-- [ng-disabled]="!myForm.valid" -->
+		<div *ngIf="!myForm.valid"  class="bg-warning">Form is invalid</div>
+		<input type="checkbox" class="md-checkbox" class="green">test						
+	</form>	
+	<canvas style="height:200px; width:300px; border:1px solid red" custom-painter></canvas>
+	<div class="alert alert-success">
+  <strong>Success!</strong> Indicates a successful or positive action.
+</div>
+</div>

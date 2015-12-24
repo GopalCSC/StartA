@@ -1,0 +1,7 @@
+<template [ngIf]="active">
+      <span class="ng"
+      [class.selected]="isSelected"
+      (click)="onClick()">
+      </span>
+</template>
+<span *ngIf="!active" class="ng inactive"></span>
