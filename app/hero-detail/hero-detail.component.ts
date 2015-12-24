@@ -1,7 +1,7 @@
 import {FORM_DIRECTIVES, ControlGroup,FormBuilder, Validators, AbstractControl, NgIf} from 'angular2/common';
 import {Component} from 'angular2/core';
 import {Router, RouteParams, ROUTER_DIRECTIVES} from 'angular2/router'
-import {Hero} from '../heroes/hero.model'
+import {Hero} from '../heroes/hero'
 import {HeroService} from '../heroes/hero.service'
 import {Routes} from '../route.config'
 import {SSNDirective} from '../ssn/ssn.directive'

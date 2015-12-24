@@ -1,6 +1,6 @@
 import {Component} from 'angular2/core';
 import {CORE_DIRECTIVES} from 'angular2/common';
-import {Hero} from '../heroes/hero.model';
+import {Hero} from '../heroes/hero';
 import {HeroService} from '../heroes/hero.service';
 import {StatusComponent, StatusChangeEvent} from "../status/status.component";
 

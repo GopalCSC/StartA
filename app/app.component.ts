@@ -1,7 +1,7 @@
 import {Component, provide} from 'angular2/core';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {UserService} from './services/user.service'; 
-import {User} from './services/user.model';
+import {User} from './services/user';
 
 import {
   RouteConfig,

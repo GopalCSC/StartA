@@ -1,5 +1,5 @@
 import {Injectable} from 'angular2/core';
-import {User} from './user.model';
+import {User} from './user';
 import {Logger} from './logger.service';
 
 @Injectable()

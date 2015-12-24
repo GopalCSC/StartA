@@ -2,10 +2,10 @@ import {Component} from 'angular2/core';
 import {CORE_DIRECTIVES} from 'angular2/common'
 import {Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import {HeroService} from './hero.service';
-import {Hero} from './hero.model';
+import {Hero} from './hero';
 import {Routes} from '../route.config';
 import {UserService} from '../services/user.service' 
-import {User} from '../services/user.model'
+import {User} from '../services/user'
 
 @Component({
   selector: 'my-heroes',

@@ -1,5 +1,5 @@
 import {HEROES} from './mock-heroes';
-import {Hero} from "./hero.model";
+import {Hero} from "./hero";
 import {Injectable} from 'angular2/core';
 import {Http} from 'angular2/http';
 

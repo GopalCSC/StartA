@@ -11,12 +11,14 @@ import {CORE_DIRECTIVES} from 'angular2/common';
   selector: 'status',
   templateUrl: 'app/status/status.component.html',
   directives: [CORE_DIRECTIVES],
-  styleUrls: ['app/status/status.component.css']
+  styleUrls: ['app/status/status.component.css'],
+  inputs: ['active'],
+  outputs: ['change']
 })
 export class StatusComponent {
   isSelected: boolean;
-  @Input() active: boolean;
-  @Output() change: EventEmitter<StatusChangeEvent>;
+  active: boolean;
+  change: EventEmitter<StatusChangeEvent>;
   constructor() {
     this.change = new EventEmitter<StatusChangeEvent>();
     this.active = true;
