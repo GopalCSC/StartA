@@ -25,13 +25,19 @@ import {HeroService} from './heroes/hero.service';
 })
 @RouteConfig(APP_ROUTES)
 export class AppComponent { 
+     showDropdownMenu: boolean;
      title = 'Application';
      routes = Routes;
      currentUser: User;
      
      constructor(private _userService: UserService) {
+         this.showDropdownMenu = true;
          _userService.getCurrentUser().then((resp) => this.currentUser = resp);
      }
+     
+     dropdownHover() {
+        this.showDropdownMenu = this.showDropdownMenu == true ? false: true;    
+     }     
 }
 
 
